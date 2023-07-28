@@ -343,8 +343,8 @@ MonoBehaviour:
   autoCreatePlayer: 1
   playerSpawnMethod: 1
   spawnPrefabs:
-  - {fileID: 4032665065920961355, guid: 28c8e0b29b351430b8896ad0fe58dc52, type: 3}
-  - {fileID: 7141550664683684862, guid: be4466ba58da942c7a3cc0660034e012, type: 3}
+  - {fileID: 4141483049436663461, guid: be4466ba58da942c7a3cc0660034e012, type: 3}
+  - {fileID: 543567002844999997, guid: 28c8e0b29b351430b8896ad0fe58dc52, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     catchupNegativeThreshold: -1
@@ -356,7 +356,7 @@ MonoBehaviour:
     dynamicAdjustmentTolerance: 1
     deliveryTimeEmaDuration: 2
   timeInterpolationGui: 0
-  unitSpawnerPrefab: {fileID: 7141550664683684862, guid: be4466ba58da942c7a3cc0660034e012,
+  unitSpawnerPrefab: {fileID: 4141483049436663461, guid: be4466ba58da942c7a3cc0660034e012,
     type: 3}
 --- !u!1 &654459897
 GameObject:
@@ -522,8 +522,9 @@ GameObject:
   m_Component:
   - component: {fileID: 671218893}
   - component: {fileID: 671218892}
+  - component: {fileID: 671218894}
   m_Layer: 0
-  m_Name: UnitSelectionHandler
+  m_Name: UnitHandlers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,6 +560,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671218894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671218891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499989392719b43af81300aa2788c138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitSelectionHandler: {fileID: 671218892}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &847673402
 GameObject:
   m_ObjectHideFlags: 0

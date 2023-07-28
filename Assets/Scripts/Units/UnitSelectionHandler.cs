@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class UnitSelectionHandler : MonoBehaviour
 {
-    [SerializeField] private LayerMask layerMask;
+    [SerializeField] private LayerMask layerMask = new LayerMask();
     
     private Camera _mainCamera;
     private List<Unit> _selectedUnits = new List<Unit>();
@@ -38,6 +38,7 @@ public class UnitSelectionHandler : MonoBehaviour
         if (!Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask)) return;
         if (!hit.collider.TryGetComponent<Unit>(out Unit unit)) return;
         if (!unit.isOwned) return;
+        
         _selectedUnits.Add(unit);
 
         foreach (Unit selectedUnit in _selectedUnits)
@@ -45,4 +46,6 @@ public class UnitSelectionHandler : MonoBehaviour
             selectedUnit.Select();
         }
     }
+
+    public List<Unit> GetSelectedUnits() => _selectedUnits;
 }
