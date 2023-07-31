@@ -7,6 +7,8 @@ public class RTSPlayer : NetworkBehaviour
 {
     [SerializeField]private List<Unit> _units = new List<Unit>();
 
+    public List<Unit> GetPlayerUnits() => _units;
+
     #region Server
 
     public override void OnStartServer()
@@ -66,8 +68,6 @@ public class RTSPlayer : NetworkBehaviour
         if(!isOwned) return;
         _units.Remove(unit);
     }
-
-    
 
     #endregion
 }
