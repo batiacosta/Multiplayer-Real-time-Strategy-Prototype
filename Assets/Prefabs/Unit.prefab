@@ -132,6 +132,7 @@ MonoBehaviour:
   syncInterval: 0
   agent: {fileID: 6993452973975299963}
   targeter: {fileID: 6012813162620713682}
+  chasingRange: 10
 --- !u!114 &3430512761669688936
 MonoBehaviour:
   m_ObjectHideFlags: 0
