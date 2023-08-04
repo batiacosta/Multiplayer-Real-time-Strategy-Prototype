@@ -412,6 +412,7 @@ MonoBehaviour:
   unitPrefab: {fileID: 543567002844999997, guid: 28c8e0b29b351430b8896ad0fe58dc52,
     type: 3}
   placeToSpawn: {fileID: 5158687848762944972}
+  health: {fileID: 8198030845412550775}
 --- !u!114 &1890444683183418426
 MonoBehaviour:
   m_ObjectHideFlags: 0
