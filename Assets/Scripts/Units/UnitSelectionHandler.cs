@@ -15,10 +15,17 @@ public class UnitSelectionHandler : MonoBehaviour
     private RTSPlayer _player;
     private Vector2 _startSelectionAreaPosition;
     
-
+    public List<Unit> GetSelectedUnits() => _selectedUnits;
+    
     private void Start()
     {
         _mainCamera = Camera.main;
+        Unit.AuthorityOnUnitDeSpawned += Unit_AuthorityOnUnitDeSpawned;
+    }
+
+    private void OnDestroy()
+    {
+        Unit.AuthorityOnUnitDeSpawned -= Unit_AuthorityOnUnitDeSpawned;
     }
 
     private void Update()
@@ -109,6 +116,11 @@ public class UnitSelectionHandler : MonoBehaviour
             }
         }
     }
+    
+    private void Unit_AuthorityOnUnitDeSpawned(Unit unit)
+    {
+        _selectedUnits.Remove(unit);
+    }
 
-    public List<Unit> GetSelectedUnits() => _selectedUnits;
+    
 }

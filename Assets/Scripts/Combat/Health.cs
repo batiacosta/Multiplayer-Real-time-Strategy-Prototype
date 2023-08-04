@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Health : NetworkBehaviour
 {
-    public event Action Server_OnDie;
+    public event Action Server_OnDied;
     public event Action<int, int> Client_OnHealthChanged; 
     
     [SerializeField] private int maxHealth = 100;
@@ -27,7 +27,7 @@ public class Health : NetworkBehaviour
         _currentHealth = Mathf.Max(_currentHealth - damage, 0);
 
         if (_currentHealth != 0) return;
-        Server_OnDie?.Invoke();
+        Server_OnDied?.Invoke();
         Debug.Log($"{gameObject.name} dies");
     }
 
