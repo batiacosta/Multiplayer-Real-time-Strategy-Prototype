@@ -23,7 +23,6 @@ public class UnitFiring : NetworkBehaviour
         Targetable target = targeter.GetTarget();
         if (target == null) return;
         if (!CanFire()) return;
-        Debug.Log("Fuego!!");
         Vector3 deltaPosition = target.transform.position - transform.position;
         Quaternion targetRotation =
             Quaternion.LookRotation(deltaPosition);
@@ -33,7 +32,6 @@ public class UnitFiring : NetworkBehaviour
             rotationSpeed * Time.deltaTime);
         if (Time.time > (1 / fireRate) + _lastFiredTime)
         {
-            Debug.Log("⁄⁄⁄Fuego x 1!!!");
             Vector3 targetPosition = target.GetAimAtPoint().position;
             Quaternion projectileOrientation = Quaternion.LookRotation(targetPosition - projectileSpwanTransform.position);
             GameObject projectileInstance = Instantiate(
@@ -48,15 +46,6 @@ public class UnitFiring : NetworkBehaviour
     private bool CanFire()
     {
         float distance = (targeter.GetTarget().transform.position - transform.position).sqrMagnitude;
-        if (distance <= (fireRange * fireRange))
-        {
-            Debug.Log("Puede disparar");
-        }
-        else
-        {
-            Debug.Log("Pailas");
-        }
-        
         return (distance <= (fireRange * fireRange));
     }
 
