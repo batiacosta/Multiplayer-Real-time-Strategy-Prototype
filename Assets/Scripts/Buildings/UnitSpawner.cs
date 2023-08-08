@@ -15,12 +15,12 @@ public class UnitSpawner : NetworkBehaviour, IPointerClickHandler
 
     public override void OnStartServer()
     {
-        health.Server_OnDied += Health_OnDied;
+        health.ServerOnDied += Health_OnDied;
     }
 
     public override void OnStopServer()
     {
-        health.Server_OnDied -= Health_OnDied;
+        health.ServerOnDied -= Health_OnDied;
     }
 
     [Server]
