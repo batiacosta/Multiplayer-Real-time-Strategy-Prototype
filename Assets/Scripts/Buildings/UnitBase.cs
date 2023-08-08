@@ -30,7 +30,7 @@ public class UnitBase : NetworkBehaviour
     [Server]
     private void Health_ServerOnDied()
     {
-        
+
     }
     
     [Server]
