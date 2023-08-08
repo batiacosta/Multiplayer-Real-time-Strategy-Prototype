@@ -27,7 +27,7 @@ public class Unit : NetworkBehaviour
     {
         base.OnStartServer();
         ServerOnUnitSpawned?.Invoke(this);
-        health.Server_OnDied += Health_OnDied;
+        health.ServerOnDied += Health_OnDied;
     }
 
     
@@ -35,7 +35,7 @@ public class Unit : NetworkBehaviour
     {
         base.OnStopServer();
         ServerOnUnitDeSpawned?.Invoke(this);
-        health.Server_OnDied -= Health_OnDied;
+        health.ServerOnDied -= Health_OnDied;
     }
     [Server]
     private void Health_OnDied()

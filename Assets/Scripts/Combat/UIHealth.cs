@@ -10,12 +10,12 @@ public class UIHealth : MonoBehaviour
 
     private void Start()
     {
-        health.Client_OnHealthChanged += Health_ClientOnHealthChanged;
+        health.ClientOnHealthChanged += Health_ClientOnHealthChanged;
     }
 
     private void OnDestroy()
     {
-        health.Client_OnHealthChanged -= Health_ClientOnHealthChanged;
+        health.ClientOnHealthChanged -= Health_ClientOnHealthChanged;
     }
 
     private void Health_ClientOnHealthChanged(int currentHealth, int maxHealth)
