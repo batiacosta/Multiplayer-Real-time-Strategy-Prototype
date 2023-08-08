@@ -28,7 +28,6 @@ public class Health : NetworkBehaviour
 
         if (_currentHealth != 0) return;
         ServerOnDied?.Invoke();
-        Debug.Log($"{gameObject.name} dies");
     }
 
     #endregion
