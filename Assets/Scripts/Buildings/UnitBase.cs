@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class UnitBase : NetworkBehaviour
 {
+    public static event Action<int> ServerOnPlayerDied;
     public static event Action<UnitBase> ServerOnBaseSpawned;
     public static event Action<UnitBase> ServerOnBaseDeSpawned;
     
@@ -30,7 +31,8 @@ public class UnitBase : NetworkBehaviour
     [Server]
     private void Health_ServerOnDied()
     {
-
+        ServerOnPlayerDied?.Invoke(connectionToClient.connectionId);
+        NetworkServer.Destroy(gameObject);
     }
     
     [Server]
