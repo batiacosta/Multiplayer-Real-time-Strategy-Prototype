@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1112664292988759350}
   - component: {fileID: 1486481466170947758}
   - component: {fileID: 866530467490335547}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,6 +119,7 @@ MonoBehaviour:
   rigidBody: {fileID: 1486481466170947758}
   lifeTime: 5
   launchForce: 10
+  damage: 20
 --- !u!1 &5251182272669549791
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +131,7 @@ GameObject:
   - component: {fileID: 6135747373822563019}
   - component: {fileID: 8052937420623465521}
   - component: {fileID: 1377050905253142690}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
