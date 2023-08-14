@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 671218893}
   - component: {fileID: 671218892}
   - component: {fileID: 671218894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: UnitHandlers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ MonoBehaviour:
   unitSelectionHandler: {fileID: 671218892}
   layerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 1281
 --- !u!1 &847673402
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 847673403}
   - component: {fileID: 847673404}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NavMesh Surface
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 1613665800}
   - component: {fileID: 1613665799}
   - component: {fileID: 1613665798}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
